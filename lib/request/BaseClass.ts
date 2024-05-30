@@ -21,9 +21,9 @@ export default class BaseClass {
     this.axiosInstance = axiosInstance;
   }
 
-  protected exceptionWrapper(cb: Function): ApolloAPIReturnType {
+  protected async exceptionWrapper(cb: Function): ApolloAPIReturnType {
     try {
-      return cb();
+      return await cb();
     } catch (exp: any) {
       //console.log('Error occured', exp.message);
       throw new Error(exp.message);
