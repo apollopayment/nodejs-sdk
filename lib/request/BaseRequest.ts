@@ -14,7 +14,7 @@ import {
 
 export default class BaseRequest extends BaseClass {
 
-  checkSignature(): ApolloAPIReturnType {
+  checkSignature() {
     return this.exceptionWrapper(async () => {
       const data: DataBuilder = new DataBuilder();
       this.headerBuilder.setData(data);
@@ -36,7 +36,7 @@ export default class BaseRequest extends BaseClass {
     });
   }
 
-  availableCurrencies(): ApolloAPIReturnType {
+  availableCurrencies() {
     return this.exceptionWrapper(async () => {
       const data: DataBuilder = new DataBuilder();
       this.headerBuilder.setData(data);
@@ -58,7 +58,7 @@ export default class BaseRequest extends BaseClass {
     });
   }
 
-  priceRate(from: string, to: string): ApolloAPIReturnType {
+  priceRate(from: string, to: string) {
     return this.exceptionWrapper(async () => {
       const data: DataBuilder = new DataBuilder({ from, to });
       this.headerBuilder.setData(data);
@@ -80,7 +80,7 @@ export default class BaseRequest extends BaseClass {
     });
   }
 
-  operationsByTXHash(tx: TNullableString = null): ApolloAPIReturnType {
+  operationsByTXHash(tx: TNullableString = null) {
     return this.exceptionWrapper(async () => {
       const data: DataBuilder = new DataBuilder({ tx });
       this.headerBuilder.setData(data);
@@ -102,7 +102,7 @@ export default class BaseRequest extends BaseClass {
     });
   }
 
-  checkAddressFormat(address: TNullableString = null, network: TNullableString = null): ApolloAPIReturnType {
+  checkAddressFormat(address: TNullableString = null, network: TNullableString = null) {
     return this.exceptionWrapper(async () => {
       const data: DataBuilder = new DataBuilder({ address, network });
       this.headerBuilder.setData(data);

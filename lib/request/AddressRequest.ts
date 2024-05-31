@@ -14,7 +14,7 @@ import {
 
 export default class AddressRequest extends BaseClass {
 
-  addAddress(req: TNewAddressEntity): ApolloAPIReturnType {
+  addAddress(req: TNewAddressEntity) {
     return this.exceptionWrapper(async () => {
       const data: DataBuilder = new DataBuilder(req);
       this.headerBuilder.setData(data);
@@ -36,7 +36,7 @@ export default class AddressRequest extends BaseClass {
     });
   }
 
-  deleteAddress(addressId: TNullableString = null): ApolloAPIReturnType {
+  deleteAddress(addressId: TNullableString = null) {
     return this.exceptionWrapper(async () => {
       const data: DataBuilder = new DataBuilder({ addressId });
       this.headerBuilder.setData(data);
@@ -58,7 +58,7 @@ export default class AddressRequest extends BaseClass {
     });
   }
 
-  updateAddress(req: TExistingAddressEntity): ApolloAPIReturnType {
+  updateAddress(req: TExistingAddressEntity) {
     return this.exceptionWrapper(async () => {
       const data: DataBuilder = new DataBuilder(req);
       this.headerBuilder.setData(data);
@@ -80,7 +80,7 @@ export default class AddressRequest extends BaseClass {
     });
   }
 
-  getListOfAddresses(req: TAddressPagination): ApolloAPIReturnType {
+  getListOfAddresses(req: TAddressPagination) {
     return this.exceptionWrapper(async () => {
       const data: DataBuilder = new DataBuilder(req);
       this.headerBuilder.setData(data);

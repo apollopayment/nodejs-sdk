@@ -13,7 +13,7 @@ import {
 } from '../types/Order';
 
 export default class OrderRequest extends BaseClass {
-  makeOrder(req: TOrderEntity): ApolloAPIReturnType {
+  makeOrder(req: TOrderEntity) {
     return this.exceptionWrapper(async () => {
       const data: DataBuilder = new DataBuilder(req);
       this.headerBuilder.setData(data);
@@ -35,7 +35,7 @@ export default class OrderRequest extends BaseClass {
     });
   }
 
-  getOrder(orderId: TNullableString = null): ApolloAPIReturnType {
+  getOrder(orderId: TNullableString = null) {
     return this.exceptionWrapper(async () => {
       const data: DataBuilder = new DataBuilder({ orderId });
       this.headerBuilder.setData(data);
@@ -57,7 +57,7 @@ export default class OrderRequest extends BaseClass {
     });
   }
 
-  getListOfOrders(req: TOrderFilter): ApolloAPIReturnType {
+  getListOfOrders(req: TOrderFilter) {
     return this.exceptionWrapper(async () => {
       const data: DataBuilder = new DataBuilder(req);
       this.headerBuilder.setData(data);

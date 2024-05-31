@@ -16,7 +16,7 @@ import {
 } from '../types/RecurringPayment';
 
 export default class RecurringPaymentRequest extends BaseClass {
-  createPaymentLink(req: TPaymentLinkRequest): ApolloAPIReturnType {
+  createPaymentLink(req: TPaymentLinkRequest) {
     return this.exceptionWrapper(async () => {
       const data: DataBuilder = new DataBuilder(req);
       this.headerBuilder.setData(data);
@@ -38,7 +38,7 @@ export default class RecurringPaymentRequest extends BaseClass {
     });
   }
 
-  getPaymentLink(id: string, merchantId: string): ApolloAPIReturnType {
+  getPaymentLink(id: string, merchantId: string) {
     return this.exceptionWrapper(async () => {
       const data: DataBuilder = new DataBuilder({ id, merchantId });
       this.headerBuilder.setData(data);
@@ -60,7 +60,7 @@ export default class RecurringPaymentRequest extends BaseClass {
     });
   }
 
-  getPaymentLinksByUser(req: TPaymentLinksByUserRequest): ApolloAPIReturnType {
+  getPaymentLinksByUser(req: TPaymentLinksByUserRequest) {
     return this.exceptionWrapper(async () => {
       const data: DataBuilder = new DataBuilder(req);
       this.headerBuilder.setData(data);
@@ -82,7 +82,7 @@ export default class RecurringPaymentRequest extends BaseClass {
     });
   }
 
-  disablePaymentLink(id: string, merchantId: string): ApolloAPIReturnType {
+  disablePaymentLink(id: string, merchantId: string) {
     return this.exceptionWrapper(async () => {
       const data: DataBuilder = new DataBuilder({ id, merchantId });
       this.headerBuilder.setData(data);
@@ -104,7 +104,7 @@ export default class RecurringPaymentRequest extends BaseClass {
     });
   }
 
-  createSubscription(req: TSubscriptionRequest): ApolloAPIReturnType {
+  createSubscription(req: TSubscriptionRequest) {
     return this.exceptionWrapper(async () => {
       const data: DataBuilder = new DataBuilder(req);
       this.headerBuilder.setData(data);
@@ -126,7 +126,7 @@ export default class RecurringPaymentRequest extends BaseClass {
     });
   }
  
-  getSubscription(id: string, merchantId: string): ApolloAPIReturnType {
+  getSubscription(id: string, merchantId: string) {
     return this.exceptionWrapper(async () => {
       const data: DataBuilder = new DataBuilder({ id, merchantId });
       this.headerBuilder.setData(data);
@@ -148,7 +148,7 @@ export default class RecurringPaymentRequest extends BaseClass {
     });
   }
 
-  cancelSubscription(id: string, merchantId: string): ApolloAPIReturnType {
+  cancelSubscription(id: string, merchantId: string) {
     return this.exceptionWrapper(async () => {
       const data: DataBuilder = new DataBuilder({ id, merchantId });
       this.headerBuilder.setData(data);
@@ -170,7 +170,7 @@ export default class RecurringPaymentRequest extends BaseClass {
     });
   }
 
-  createPayment(req: TPaymentRequest): ApolloAPIReturnType {
+  createPayment(req: TPaymentRequest) {
     return this.exceptionWrapper(async () => {
       const data: DataBuilder = new DataBuilder(req);
       this.headerBuilder.setData(data);

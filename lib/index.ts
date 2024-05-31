@@ -32,7 +32,7 @@ const defaultAxiosOptions: AxiosRequestConfig = {
   },
 };
 
-export default class ApolloPayment {
+export class ApolloPayment {
   public base: BaseRequest;
   public account: AccountRequest;
   public address: AddressRequest;
